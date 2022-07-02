@@ -59,16 +59,27 @@ class VehicleInfoFragment : DialogFragment() {
                         Glide.with(requireActivity()).load(vehicleInfo.photo).into(binding.imageViewVehicle)
 
                         textViewVehicleName.text = vehicleInfo.name.checkIfIsEmpty()
+                        textViewVehicleName.isSelected = true
                         textViewModelValue.text = vehicleInfo.model.checkIfIsEmpty()
+                        textViewModelValue.isSelected = true
                         textViewManufacturerValue.text = vehicleInfo.manufacturer.checkIfIsEmpty()
+                        textViewManufacturerValue.isSelected = true
                         textViewCostInCreditsValue.text = vehicleInfo.costInCredits.checkIfIsEmpty()
+                        textViewCostInCreditsValue.isSelected = true
                         textViewLengthValue.text = vehicleInfo.length
+                        textViewLengthValue.isSelected = true
                         textViewMaxSpeedValue.text = vehicleInfo.maxAtmospheringSpeed.checkIfIsEmpty()
+                        textViewMaxSpeedValue.isSelected = true
                         textViewCrewValue.text = vehicleInfo.crew.checkIfIsEmpty()
+                        textViewCrewValue.isSelected = true
                         textViewPassengersValue.text = vehicleInfo.passengers.checkIfIsEmpty()
+                        textViewPassengersValue.isSelected = true
                         textViewCargoCapacitiesValue.text = vehicleInfo.cargoCapacity.checkIfIsEmpty()
+                        textViewCargoCapacitiesValue.isSelected = true
                         textViewConsumablesValue.text = vehicleInfo.consumables.checkIfIsEmpty()
+                        textViewConsumablesValue.isSelected = true
                         textViewClassValue.text = vehicleInfo.vehicleClass.checkIfIsEmpty()
+                        textViewClassValue.isSelected = true
                     }
 
                     setUpRecyclerViewFilms(vehicleInfo.relatedFilms)

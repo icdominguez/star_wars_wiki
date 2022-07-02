@@ -60,14 +60,23 @@ class PlanetInfoFragment : DialogFragment() {
                     }
 
                     textViewPlanetName.text = planetInfo.name.checkIfIsEmpty()
+                    textViewPlanetName.isSelected = true
                     textViewRotationPeriodValue.text = planetInfo.rotationPeriod.checkIfIsEmpty()
+                    textViewRotationPeriodValue.isSelected = true
                     textViewOrbitalPeriodValue.text = planetInfo.orbitalPeriod.checkIfIsEmpty()
+                    textViewOrbitalPeriodValue.isSelected = true
                     textViewDiameterValue.text = planetInfo.diameter.checkIfIsEmpty()
+                    textViewDiameterValue.isSelected = true
                     textViewClimateValue.text = planetInfo.climate.checkIfIsEmpty()
+                    textViewClimateValue.isSelected = true
                     textViewGravityValue.text = planetInfo.gravity.checkIfIsEmpty()
+                    textViewGravityValue.isSelected = true
                     textViewTerrainValue.text = planetInfo.terrain.checkIfIsEmpty()
+                    textViewTerrainValue.isSelected = true
                     textViewSurfaceWaterValue.text = planetInfo.surfaceWater.checkIfIsEmpty()
+                    textViewSurfaceWaterValue.isSelected = true
                     textViewPopulationValue.text = planetInfo.population.checkIfIsEmpty()
+                    textViewPopulationValue.isSelected = true
 
                     setUpRecyclerViewFilms(planetInfo.films)
                     setUpRecyclerViewResidents(planetInfo.residents)

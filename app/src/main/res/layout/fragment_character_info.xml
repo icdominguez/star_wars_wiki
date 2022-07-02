@@ -29,8 +29,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textViewItemDescription"
-        android:visibility="gone"
+        android:id="@+id/textViewCharacterName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -38,6 +37,9 @@
         android:textSize="20sp"
         android:textAlignment="center"
         android:textColor="@color/yellow"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
         app:layout_constraintTop_toBottomOf="@+id/imageViewCharacter" />
 
     <TextView
@@ -53,7 +55,7 @@
         style="@style/TextViewItemDetailLabel"
         android:text="Birth Year"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewItemDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCharacterName" />
 
     <TextView
         android:id="@+id/textViewSpecieLabel"

@@ -49,7 +49,7 @@
         <item name="android:layout_marginTop">8dp</item>
         <item name="fontFamily">@font/star_wars</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:visibility">gone</item>
+        <item name="android:visibility">visible</item>
     </style>
 
     <style name="TextViewItemDetailValue" parent="Theme.StarWarsEncyclopedia">

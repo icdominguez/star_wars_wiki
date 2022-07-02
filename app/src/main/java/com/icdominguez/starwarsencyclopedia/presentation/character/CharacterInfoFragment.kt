@@ -67,7 +67,8 @@ class CharacterInfoFragment : DialogFragment() {
                             Glide.with(requireActivity()).load(R.drawable.no_picture)
                                 .into(imageViewCharacter)
                         }
-                        textViewItemDescription.text = characterInfo.name.checkIfIsEmpty()
+                        textViewCharacterName.text = characterInfo.name.checkIfIsEmpty()
+                        textViewCharacterName.isSelected = true
                         textViewBirthYearValue.text = characterInfo.birthYear.checkIfIsEmpty()
                         textViewHeightValue.text = characterInfo.height.checkIfIsEmpty()
                         textViewHairColorValue.text = characterInfo.hairColor.checkIfIsEmpty()
@@ -119,7 +120,7 @@ class CharacterInfoFragment : DialogFragment() {
 
             imageViewCharacter.visibility = View.VISIBLE
 
-            textViewItemDescription.visibility = View.VISIBLE
+            textViewCharacterName.visibility = View.VISIBLE
             textViewBirthYearLabel.visibility = View.VISIBLE
             textViewHeightLabel.visibility = View.VISIBLE
             textViewHairColorLabel.visibility = View.VISIBLE

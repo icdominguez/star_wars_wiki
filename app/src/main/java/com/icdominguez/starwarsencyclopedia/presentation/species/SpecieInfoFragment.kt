@@ -62,14 +62,23 @@ class SpecieInfoFragment : DialogFragment() {
                         }
 
                         textViewSpecieName.text = specieInfo.name.checkIfIsEmpty()
+                        textViewSpecieName.isSelected = true
                         textViewClassificationValue.text = specieInfo.classification.checkIfIsEmpty()
+                        textViewClassificationValue.isSelected = true
                         textViewDesignationValue.text = specieInfo.designation.checkIfIsEmpty()
+                        textViewDesignationValue.isSelected = true
                         textViewLanguageValue.text = specieInfo.language.checkIfIsEmpty()
+                        textViewLanguageValue.isSelected = true
                         textViewAvgLifespanValue.text = specieInfo.avgLifespan.checkIfIsEmpty()
+                        textViewAvgLifespanValue.isSelected = true
                         textViewAvgHeightValue.text = specieInfo.avgHeight.checkIfIsEmpty()
+                        textViewAvgHeightValue.isSelected = true
                         textViewHairColorsValue.text = specieInfo.hairColor.toString()
+                        textViewHairColorsValue.isSelected = true
                         textViewSkinColorsValue.text = specieInfo.skinColor.toString()
+                        textViewSkinColorsValue.isSelected = true
                         textViewEyeColorsValue.text = specieInfo.eyeColor.toString()
+                        textViewEyeColorsValue.isSelected = true
 
                         progressBarLoadingSpecie.visibility = View.GONE
                         showView()

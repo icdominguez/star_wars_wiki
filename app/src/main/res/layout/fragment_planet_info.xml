@@ -68,7 +68,6 @@
         android:id="@+id/textViewOrbitalPeriodValue"
         style="@style/TextViewItemDetailValue"
         app:layout_constraintBottom_toBottomOf="@+id/textViewOrbitalPeriodLabel"
-        app:layout_constraintEnd_toStartOf="@+id/textViewTerrainLabel"
         app:layout_constraintStart_toEndOf="@id/textViewOrbitalPeriodLabel"
         app:layout_constraintTop_toTopOf="@+id/textViewOrbitalPeriodLabel" />
 
@@ -142,15 +141,15 @@
     <TextView
         android:id="@+id/textViewTerrainValue"
         style="@style/TextViewItemDetailValue"
-        app:layout_constraintEnd_toEndOf="@+id/textViewGravityValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewTerrainLabel"
         app:layout_constraintTop_toTopOf="@+id/textViewOrbitalPeriodLabel" />
 
     <TextView
         android:id="@+id/textViewTerrainLabel"
         style="@style/TextViewItemDetailLabel"
-        android:layout_marginEnd="8dp"
         android:text="terrain"
-        app:layout_constraintEnd_toStartOf="@+id/textViewTerrainValue"
+        app:layout_constraintStart_toEndOf="@+id/textViewOrbitalPeriodValue"
         app:layout_constraintTop_toBottomOf="@+id/textViewGravityLabel" />
 
     <TextView
@@ -164,7 +163,7 @@
     <TextView
         android:id="@+id/textViewSurfaceWaterValue"
         style="@style/TextViewItemDetailValue"
-        app:layout_constraintEnd_toEndOf="@+id/textViewTerrainValue"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewDiameterLabel" />
 
     <TextView
@@ -178,7 +177,7 @@
     <TextView
         android:id="@+id/textViewPopulationValue"
         style="@style/TextViewItemDetailValue"
-        app:layout_constraintEnd_toEndOf="@+id/textViewSurfaceWaterValue"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewClimateLabel" />
 
 

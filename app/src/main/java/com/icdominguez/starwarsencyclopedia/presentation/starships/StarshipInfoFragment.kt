@@ -62,21 +62,31 @@ class StarshipInfoFragment : DialogFragment() {
                                 .into(imageViewStarship)
                         }
                         textViewStarship.text = starshipInfo.name.checkIfIsEmpty()
+                        textViewStarship.isSelected = true
                         textViewModelValue.text = starshipInfo.model.checkIfIsEmpty()
+                        textViewModelValue.isSelected = true
                         textViewManufacturerValue.text = starshipInfo.manufacturer.checkIfIsEmpty()
-                        textViewCostInCreditsValue.text =
-                            starshipInfo.costInCredits.checkIfIsEmpty()
+                        textViewManufacturerValue.isSelected = true
+                        textViewCostInCreditsValue.text = starshipInfo.costInCredits.checkIfIsEmpty()
+                        textViewCostInCreditsValue.isSelected = true
                         textViewLengthValue.text = starshipInfo.length.checkIfIsEmpty()
-                        textViewMaxSpeedValue.text =
-                            starshipInfo.maxAtmospheringSpeed.checkIfIsEmpty()
+                        textViewLengthValue.isSelected = true
+                        textViewMaxSpeedValue.text = starshipInfo.maxAtmospheringSpeed.checkIfIsEmpty()
+                        textViewMaxSpeedValue.isSelected = true
                         textViewCrewValue.text = starshipInfo.crew.checkIfIsEmpty()
+                        textViewCrewValue.isSelected = true
                         textViewPassengersValue.text = starshipInfo.passengers.checkIfIsEmpty()
-                        textViewCargoCapacityLabel.text =
-                            starshipInfo.cargo_capacity.checkIfIsEmpty()
+                        textViewPassengersValue.isSelected = true
+                        textViewCargoCapacityLabel.text = starshipInfo.cargo_capacity.checkIfIsEmpty()
+                        textViewCargoCapacityLabel.isSelected = true
                         textViewConsumablesValue.text = starshipInfo.consumables.checkIfIsEmpty()
+                        textViewConsumablesValue.isSelected = true
                         textViewHyperdriveRatingValue.text = starshipInfo.model.checkIfIsEmpty()
+                        textViewHyperdriveRatingValue.isSelected = true
                         textViewMGLTValue.text = starshipInfo.mglt.checkIfIsEmpty()
+                        textViewMGLTValue.isSelected = true
                         textViewClassValue.text = starshipInfo.starshipClass.checkIfIsEmpty()
+                        textViewClassValue.isSelected = true
 
                         showView()
 

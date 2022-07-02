@@ -51,6 +51,7 @@ class FilmInfoFragment : DialogFragment() {
                     with(binding) {
                         Glide.with(requireActivity()).load(film.photo).into(imageViewFilm)
                         textViewFilmName.text = film.name.checkIfIsEmpty()
+                        textViewFilmName.isSelected = true
                         textViewDateCreatedValue.text = film.dateCreated.checkIfIsEmpty()
                         textViewDirectorValue.text = film.director.checkIfIsEmpty()
                         textViewProducerValue.text = film.producers.toString().checkIfIsEmpty()

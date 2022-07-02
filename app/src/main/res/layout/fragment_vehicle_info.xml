@@ -73,7 +73,7 @@
     <TextView
         android:id="@+id/textViewCostInCreditsLabel"
         style="@style/TextViewItemDetailLabel"
-        android:text="cost in credits"
+        android:text="cost"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewManufacturerLabel" />
 
