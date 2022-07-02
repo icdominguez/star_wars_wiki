@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/star_wars_bg"
+    tools:context=".presentation.vehicles.VehicleInfoFragment">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageViewVehicle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewVehicleInfoBack"
+        app:riv_border_color="#FFE919"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="10dp" />
+
+    <ImageView
+        android:id="@+id/imageViewVehicleInfoBack"
+        style="@style/ImageViewBack"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewVehicleName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/star_wars"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewVehicle" />
+
+    <TextView
+        android:id="@+id/textViewModelLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="model"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVehicleName" />
+
+    <TextView
+        android:id="@+id/textViewModelValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewModelLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCrewLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewModelLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewModelLabel" />
+
+    <TextView
+        android:id="@+id/textViewManufacturerLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:maxLines="1"
+        android:text="manufacturer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewModelValue" />
+
+    <TextView
+        android:id="@+id/textViewManufacturerValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewManufacturerLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPassengersLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewManufacturerLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewManufacturerLabel" />
+
+    <TextView
+        android:id="@+id/textViewCostInCreditsLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="cost in credits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewManufacturerLabel" />
+
+    <TextView
+        android:id="@+id/textViewCostInCreditsValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCostInCreditsLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCargoCapacitiesLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewCostInCreditsLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewCostInCreditsLabel" />
+
+    <TextView
+        android:id="@+id/textViewLengthLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="length"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCostInCreditsLabel" />
+
+    <TextView
+        android:id="@+id/textViewLengthValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLengthLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewConsumablesLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewLengthLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewLengthLabel" />
+
+    <TextView
+        android:id="@+id/textViewMaxSpeedLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="max speed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLengthLabel" />
+
+    <TextView
+        android:id="@+id/textViewMaxSpeedValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMaxSpeedLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewClassLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewMaxSpeedLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewMaxSpeedLabel" />
+
+    <TextView
+        android:id="@+id/textViewCrewValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewModelValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewModelValue" />
+
+    <TextView
+        android:id="@+id/textViewCrewLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="crew"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCrewValue"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCrewValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVehicleName" />
+
+    <TextView
+        android:id="@+id/textViewPassengersValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewManufacturerLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewManufacturerLabel" />
+
+    <TextView
+        android:id="@+id/textViewPassengersLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="passengers"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPassengersValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCrewLabel" />
+
+    <TextView
+        android:id="@+id/textViewCargoCapacitiesValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCostInCreditsLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewCostInCreditsLabel" />
+
+    <TextView
+        android:id="@+id/textViewCargoCapacitiesLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="cargo capacities"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCargoCapacitiesValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPassengersLabel" />
+
+    <TextView
+        android:id="@+id/textViewConsumablesValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLengthLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewLengthLabel" />
+
+    <TextView
+        android:id="@+id/textViewConsumablesLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="consumables"
+        app:layout_constraintEnd_toStartOf="@+id/textViewConsumablesValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCargoCapacitiesLabel" />
+
+    <TextView
+        android:id="@+id/textViewClassValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMaxSpeedLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewMaxSpeedLabel" />
+
+    <TextView
+        android:id="@+id/textViewClassLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="class"
+        app:layout_constraintEnd_toStartOf="@+id/textViewClassValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewConsumablesLabel" />
+
+    <View
+        android:id="@+id/viewFilmsSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/textViewClassLabel" />
+
+    <TextView
+        android:id="@+id/textViewFilms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/star_wars"
+        android:text="films"
+        android:textColor="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFilmsSeparator" />
+
+    <ImageView
+        android:id="@+id/imageViewExpandFilms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_arrow_down"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewFilms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFilmsSeparator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFilms"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/imageViewExpandFilms"
+        tools:listitem="@layout/horizontal_recycler_view_item" />
+
+    <View
+        android:id="@+id/viewPilotsSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewFilms" />
+
+    <TextView
+        android:id="@+id/textViewPilots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/star_wars"
+        android:text="pilots"
+        android:textColor="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/textViewFilms"
+        app:layout_constraintTop_toBottomOf="@+id/viewPilotsSeparator" />
+
+    <ImageView
+        android:id="@+id/imageViewExpandVehicles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_down"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewExpandFilms"
+        app:layout_constraintTop_toBottomOf="@+id/viewPilotsSeparator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPilots"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewExpandVehicles"
+        tools:listitem="@layout/horizontal_recycler_view_item" />
+
+    <View
+        android:id="@+id/viewFinalSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewPilots" />
+
+    <ProgressBar
+        android:id="@+id/progressBarVehicles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/yellow_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

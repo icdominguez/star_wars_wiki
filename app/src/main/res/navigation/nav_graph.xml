@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_charactersFragment"
+            app:destination="@id/charactersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_vehiclesFragment"
+            app:destination="@id/vehiclesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_planetsFragment"
+            app:destination="@id/planetsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_starshipsFragment"
+            app:destination="@id/starshipsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_filmsFragment"
+            app:destination="@id/filmsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_speciesFragment"
+            app:destination="@id/speciesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.character.CharactersFragment"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" >
+        <action
+            android:id="@+id/action_charactersFragment_to_characterInfoFragment"
+            app:destination="@id/characterInfoFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/charactersFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/characterInfoFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.character.CharacterInfoFragment"
+        android:label="fragment_character_info"
+        tools:layout="@layout/fragment_character_info" >
+        <argument
+            android:name="character"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_characterInfoFragment_to_vehicleInfoFragment"
+            app:destination="@id/vehicleInfoFragment" />
+        <action
+            android:id="@+id/action_characterInfoFragment_to_starshipInfoFragment"
+            app:destination="@id/starshipInfoFragment" />
+        <action
+            android:id="@+id/action_characterInfoFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+        <action
+            android:id="@+id/action_characterInfoFragment_to_planetInfoFragment"
+            app:destination="@id/planetInfoFragment"
+            app:popUpTo="@id/characterInfoFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_characterInfoFragment_to_specieInfoFragment"
+            app:destination="@id/specieInfoFragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/vehiclesFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.vehicles.VehiclesFragment"
+        android:label="fragment_vehicles"
+        tools:layout="@layout/fragment_vehicles" >
+        <action
+            android:id="@+id/action_vehiclesFragment_to_vehicleInfoFragment"
+            app:destination="@id/vehicleInfoFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/vehicleInfoFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.vehicles.VehicleInfoFragment"
+        android:label="fragment_vehicle_info"
+        tools:layout="@layout/fragment_vehicle_info" >
+        <argument
+            android:name="vehicle"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_vehicleInfoFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+        <action
+            android:id="@+id/action_vehicleInfoFragment_to_characterInfoFragment"
+            app:destination="@id/characterInfoFragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/planetsFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.planets.PlanetsFragment"
+        android:label="fragment_planets"
+        tools:layout="@layout/fragment_planets" >
+        <action
+            android:id="@+id/action_planetsFragment_to_planetInfoFragment"
+            app:destination="@id/planetInfoFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/planetInfoFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.planets.PlanetInfoFragment"
+        android:label="fragment_planet_info"
+        tools:layout="@layout/fragment_planet_info" >
+        <argument
+            android:name="planet"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_planetInfoFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+        <action
+            android:id="@+id/action_planetInfoFragment_to_characterInfoFragment"
+            app:destination="@id/characterInfoFragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/starshipsFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.starships.StarshipsFragment"
+        android:label="fragment_starships"
+        tools:layout="@layout/fragment_starships" >
+        <action
+            android:id="@+id/action_starshipsFragment_to_starshipInfoFragment"
+            app:destination="@id/starshipInfoFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/starshipInfoFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.starships.StarshipInfoFragment"
+        android:label="fragment_starship_info"
+        tools:layout="@layout/fragment_starship_info" >
+        <argument
+            android:name="starship"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_starshipInfoFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+        <action
+            android:id="@+id/action_starshipInfoFragment_to_characterInfoFragment"
+            app:destination="@id/characterInfoFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/filmsFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.film.FilmsFragment"
+        android:label="fragment_films"
+        tools:layout="@layout/fragment_films" >
+        <action
+            android:id="@+id/action_filmsFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/filmInfoFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.film.FilmInfoFragment"
+        android:label="fragment_film_info"
+        tools:layout="@layout/fragment_film_info" >
+        <argument
+            android:name="film"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+    <fragment
+        android:id="@+id/speciesFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.species.SpeciesFragment"
+        android:label="fragment_species"
+        tools:layout="@layout/fragment_species" >
+        <action
+            android:id="@+id/action_speciesFragment_to_specieInfoFragment"
+            app:destination="@id/specieInfoFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/specieInfoFragment"
+        android:name="com.icdominguez.starwarsencyclopedia.presentation.species.SpecieInfoFragment"
+        android:label="fragment_specie_info"
+        tools:layout="@layout/fragment_specie_info" >
+        <argument
+            android:name="specie"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_specieInfoFragment_to_characterInfoFragment"
+            app:destination="@id/characterInfoFragment" />
+        <action
+            android:id="@+id/action_specieInfoFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+    </dialog>
+
+</navigation>

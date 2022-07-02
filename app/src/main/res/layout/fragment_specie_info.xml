@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/star_wars_bg"
+    tools:context=".presentation.species.SpecieInfoFragment">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageViewSpecie"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSpecieInfoBack"
+        app:riv_border_color="#FFE919"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="10dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageViewSpecieInfoBack"
+        style="@style/ImageViewBack"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSpecieName"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/star_wars"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSpecie" />
+
+    <TextView
+        android:id="@+id/textViewClassificationLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="classification"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSpecieName" />
+
+    <TextView
+        android:id="@+id/textViewClassificationValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewClassificationLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewAvgHeightLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewClassificationLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewClassificationLabel" />
+
+
+    <TextView
+        android:id="@+id/textViewDesignationLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="designation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClassificationLabel" />
+
+    <TextView
+        android:id="@+id/textViewDesignationValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDesignationLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewHairColorsLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewDesignationLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewDesignationLabel" />
+
+
+    <TextView
+        android:id="@+id/textViewLanguageLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="language"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDesignationLabel" />
+
+    <TextView
+        android:id="@+id/textViewLanguageValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLanguageLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSkinColorsLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewLanguageLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewLanguageLabel" />
+
+
+    <TextView
+        android:id="@+id/textViewAvgLifespanLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="avg lifespan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLanguageLabel" />
+
+    <TextView
+        android:id="@+id/textViewAvgLifespanValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAvgLifespanLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewAvgLifespanLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewAvgLifespanLabel" />
+
+    <TextView
+        android:id="@+id/textViewAvgHeightLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="avg height"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewClassificationValue"
+        app:layout_constraintEnd_toStartOf="@+id/textViewAvgHeightValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSpecieName" />
+
+    <TextView
+        android:id="@+id/textViewAvgHeightValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewClassificationLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewClassificationLabel" />
+
+    <TextView
+        android:id="@+id/textViewHairColorsValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDesignationValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewDesignationValue" />
+
+    <TextView
+        android:id="@+id/textViewHairColorsLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="hair color(s)"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDesignationLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewHairColorsValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAvgHeightLabel" />
+
+    <TextView
+        android:id="@+id/textViewSkinColorsLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="skin color(s)"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSkinColorsValue"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSkinColorsValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHairColorsLabel" />
+
+    <TextView
+        android:id="@+id/textViewSkinColorsValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLanguageValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewLanguageValue" />
+
+    <TextView
+        android:id="@+id/textViewEyeColorsLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="Eye color(s)"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAvgLifespanLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewAvgLifespanValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSkinColorsLabel" />
+
+    <TextView
+        android:id="@+id/textViewEyeColorsValue"
+        style="@style/TextViewItemDetailValue"
+        android:fontFamily="@font/star_wars"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewEyeColorsLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewEyeColorsLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewEyeColorsLabel" />
+
+    <View
+        android:id="@+id/viewFilmsSeparator"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/textViewAvgLifespanLabel" />
+
+    <TextView
+        android:id="@+id/textViewFilms"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/star_wars"
+        android:text="films"
+        android:textColor="@color/yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFilmsSeparator" />
+
+    <ImageView
+        android:id="@+id/imageViewExpandFilms"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewFilms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFilmsSeparator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFilms"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/imageViewExpandFilms"
+        tools:listitem="@layout/horizontal_recycler_view_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewSeparatorCharacters"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewFilms" />
+
+    <TextView
+        android:id="@+id/textViewCharacters"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/star_wars"
+        android:text="characters"
+        android:textColor="@color/yellow"
+        app:layout_constraintStart_toStartOf="@+id/textViewFilms"
+        app:layout_constraintTop_toBottomOf="@+id/viewSeparatorCharacters" />
+
+    <ImageView
+        android:id="@+id/imageViewExpandCharacters"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewExpandFilms"
+        app:layout_constraintTop_toBottomOf="@+id/viewSeparatorCharacters" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCharacters"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewExpandCharacters"
+        tools:listitem="@layout/horizontal_recycler_view_item" />
+
+    <View
+        android:id="@+id/viewFinalSeparator"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewCharacters" />
+
+    <ProgressBar
+        android:id="@+id/progressBarLoadingSpecie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

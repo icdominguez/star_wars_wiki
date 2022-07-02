@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/star_wars_bg"
+    tools:context=".presentation.planets.PlanetInfoFragment">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageViewPlanet"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSpecieInfoBack"
+        app:riv_border_color="#FFE919"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="10dp" />
+
+    <ImageView
+        android:id="@+id/imageViewSpecieInfoBack"
+        style="@style/ImageViewBack"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPlanetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/star_wars"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textSize="20dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlanet" />
+
+
+
+    <TextView
+        android:id="@+id/textViewRotationPeriodLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="rotation period"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlanetName" />
+
+    <TextView
+        android:id="@+id/textViewRotationPeriodValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRotationPeriodLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewGravityLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewRotationPeriodLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewRotationPeriodLabel" />
+
+    <TextView
+        android:id="@+id/textViewOrbitalPeriodLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="orbital period"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRotationPeriodLabel" />
+
+    <TextView
+        android:id="@+id/textViewOrbitalPeriodValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewOrbitalPeriodLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTerrainLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewOrbitalPeriodLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewOrbitalPeriodLabel" />
+
+    <TextView
+        android:id="@+id/textViewDiameterLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="diameter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOrbitalPeriodLabel" />
+
+    <TextView
+        android:id="@+id/textViewDiameterValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDiameterLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSurfaceWaterLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewDiameterLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewDiameterLabel" />
+
+    <TextView
+        android:id="@+id/textViewClimateLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:text="climate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDiameterLabel" />
+
+    <TextView
+        android:id="@+id/textViewClimateValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintBottom_toBottomOf="@id/textViewClimateLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPopulationLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewClimateLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewClimateLabel" />
+
+    <View
+        android:id="@+id/viewRecyclerViewsSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/textViewClimateLabel" />
+
+    <TextView
+        android:id="@+id/textViewResidents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/star_wars"
+        android:text="residents"
+        android:textColor="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewRecyclerViewsSeparator" />
+
+
+    <TextView
+        android:id="@+id/textViewGravityValue"
+        style="@style/TextViewItemDetailValue"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewRotationPeriodLabel" />
+
+    <TextView
+        android:id="@+id/textViewGravityLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="gravity"
+        app:layout_constraintEnd_toStartOf="@+id/textViewGravityValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlanetName" />
+
+    <TextView
+        android:id="@+id/textViewTerrainValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintEnd_toEndOf="@+id/textViewGravityValue"
+        app:layout_constraintTop_toTopOf="@+id/textViewOrbitalPeriodLabel" />
+
+    <TextView
+        android:id="@+id/textViewTerrainLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="terrain"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTerrainValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGravityLabel" />
+
+    <TextView
+        android:id="@+id/textViewSurfaceWaterLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="surface water"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSurfaceWaterValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTerrainLabel" />
+
+    <TextView
+        android:id="@+id/textViewSurfaceWaterValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTerrainValue"
+        app:layout_constraintTop_toTopOf="@+id/textViewDiameterLabel" />
+
+    <TextView
+        android:id="@+id/textViewPopulationLabel"
+        style="@style/TextViewItemDetailLabel"
+        android:layout_marginEnd="8dp"
+        android:text="population"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPopulationValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSurfaceWaterLabel" />
+
+    <TextView
+        android:id="@+id/textViewPopulationValue"
+        style="@style/TextViewItemDetailValue"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSurfaceWaterValue"
+        app:layout_constraintTop_toTopOf="@+id/textViewClimateLabel" />
+
+
+    <ImageView
+        android:id="@+id/imageViewExpandResidents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewResidents"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewResidents"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewExpandResidents"
+        tools:listitem="@layout/horizontal_recycler_view_item" />
+
+    <View
+        android:id="@+id/viewResidentsSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewResidents" />
+
+    <TextView
+        android:id="@+id/textViewFilms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/star_wars"
+        android:text="films"
+        android:textColor="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewResidentsSeparator" />
+
+    <ImageView
+        android:id="@+id/imageViewExpandFilms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewFilms"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFilms"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewExpandFilms"
+        tools:listitem="@layout/horizontal_recycler_view_item" />
+
+    <View
+        android:id="@+id/viewFilmsSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewFilms" />
+
+    <ProgressBar
+        android:id="@+id/progressBarPlanetInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/yellow_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/star_wars_bg"
+    tools:context=".presentation.film.FilmInfoFragment">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageViewFilm"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFilmInfoBack"
+        app:riv_border_color="#FFE919"
+        android:layout_marginTop="10dp"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="10dp" />
+
+    <ImageView
+        android:id="@+id/imageViewFilmInfoBack"
+        style="@style/ImageViewBack"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewFilmName"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/star_wars"
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewFilm"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFilm"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFilm" />
+
+    <TextView
+        android:id="@+id/textViewDateCreatedLabel"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date created"
+        android:fontFamily="@font/star_wars"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFilmName" />
+
+    <TextView
+        android:id="@+id/textViewDateCreatedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/star_wars"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDateCreatedLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewDateCreatedLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewDateCreatedLabel" />
+
+    <TextView
+        android:id="@+id/textViewDirectorLabel"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="director"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/star_wars"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/textViewDateCreatedLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateCreatedLabel" />
+
+    <TextView
+        android:id="@+id/textViewDirectorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/star_wars"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDirectorLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewDirectorLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewDirectorLabel" />
+
+    <TextView
+        android:id="@+id/textViewProducerLabel"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/star_wars"
+        android:text="producer(s)"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewDateCreatedLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDirectorLabel" />
+
+    <TextView
+        android:id="@+id/textViewProducerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/star_wars"
+        android:textColor="@color/yellow"
+        app:layout_constraintStart_toEndOf="@id/textViewProducerLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewProducerLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewProducerLabel" />
+
+    <View
+        android:id="@+id/view5"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/textViewProducerValue" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/view5">
+
+        <TextView
+            android:id="@+id/textViewOpeningCawl"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/star_wars"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@color/yellow" />
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBarLoadingFilmInfo"
+        android:indeterminateTint="@color/yellow_transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

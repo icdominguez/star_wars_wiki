@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Star Wars</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home_fragment_developed_by">App developed by icdominguez</string>
+    <string name="home_fragment_films">films</string>
+    <string name="home_fragment_characters">characters</string>
+    <string name="home_fragment_species">species</string>
+    <string name="home_fragment_vehicles">vehicles</string>
+    <string name="home_fragment_planets">planets</string>
+    <string name="home_fragment_starships">starships</string>
+</resources>

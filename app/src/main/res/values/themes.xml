@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.StarWarsEncyclopedia" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/yellow_transparent</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    
+    <style name="SplashTheme" parent="Theme.StarWarsEncyclopedia">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="">
+        <item name="android:layout_marginHorizontal">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/bg_yellow_rounded</item>
+        <item name="android:searchIcon">@drawable/ic_search</item>
+        <item name="android:searchHintIcon">@drawable/ic_search</item>
+        <item name="android:closeIcon">@drawable/ic_close</item>
+    </style>
+
+    <style name="TextViewTitle" parent="Theme.StarWarsEncyclopedia">
+        <item name="android:textColor">@color/yellow</item>
+        <item name="fontFamily">@font/star_wars</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="ImageViewBack" parent="Theme.StarWarsEncyclopedia">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:src">@drawable/ic_arrow_back</item>
+    </style>
+
+    <style name="TextViewItemDetailLabel" parent="Theme.StarWarsEncyclopedia">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="fontFamily">@font/star_wars</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="TextViewItemDetailValue" parent="Theme.StarWarsEncyclopedia">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">8dp</item>
+        <item name="fontFamily">@font/star_wars</item>
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.StarWarsEncyclopedia">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+</resources>
