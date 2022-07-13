@@ -104,6 +104,11 @@ class CharacterInfoFragment : DialogFragment() {
                             findNavController().popBackStack()
                         }
 
+                        imageViewCloseCharaterInfo.setOnClickListener {
+                            val action = com.icdominguez.starwarsencyclopedia.presentation.character.CharacterInfoFragmentDirections.actionCharacterInfoFragmentToHomeFragment()
+                            findNavController().navigate(action)
+                        }
+
                         if (characterInfo.related_vehicles.isNotEmpty()) setUpRecyclerViewVehicles(characterInfo.related_vehicles)
                         if (characterInfo.related_starships.isNotEmpty()) setUpRecyclerViewStarships(characterInfo.related_starships)
                         if (characterInfo.related_films.isNotEmpty()) setUpRecyclerViewFilms(characterInfo.related_films)
@@ -141,6 +146,9 @@ class CharacterInfoFragment : DialogFragment() {
             imageViewExpandStarships.visibility = View.VISIBLE
 
             imageViewCharacterInfoBack.visibility = View.VISIBLE
+            imageViewCloseCharaterInfo.visibility = View.VISIBLE
+            imageViewCharacterFavorite.visibility = View.VISIBLE
+
             textViewSpecieLabel.visibility = View.VISIBLE
         }
     }

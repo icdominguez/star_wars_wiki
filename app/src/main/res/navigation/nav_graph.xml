@@ -69,6 +69,11 @@
         <action
             android:id="@+id/action_characterInfoFragment_to_specieInfoFragment"
             app:destination="@id/specieInfoFragment" />
+        <action
+            android:id="@+id/action_characterInfoFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </dialog>
 
     <fragment

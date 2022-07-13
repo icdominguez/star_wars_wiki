@@ -9,13 +9,14 @@
 
     <TextView
         android:id="@+id/textViewVehicles"
+        style="@style/TextViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextViewTitle"
         android:text="@string/home_fragment_vehicles"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewVehiclesGoBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageViewVehiclesGoBack" />
 
     <ImageView
         android:id="@+id/imageViewVehiclesGoBack"
