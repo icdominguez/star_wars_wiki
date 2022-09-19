@@ -1,9 +1,11 @@
 # star_wars_wiki
 
-Repository for the Mothly Challenge of Febreruary by MoureDev
+Repository for the Mothly Challenge of February by MoureDev
 A wiki gallery for Star Wars. Backend and bbdd also developed by me.
 
 Web Services url: https://icdominguez-star-wars.herokuapp.com
+
+*pending - migrate to compose*
 
 <table align="center">
 	<tr>
